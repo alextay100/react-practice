@@ -1,59 +1,34 @@
+import Card from "./Card";
 import ExpenseItem from "./ExpenseItem";
+import "./Expenses.css"
 
-function Expenses() {
-    const expenses = [
-        {
-          id: "e1",
-          title: "Car Insurance",
-          amount: 325.76,
-          date: new Date(2021, 7, 4),
-        },
-        {
-          id: "e2",
-          title: "Table",
-          amount: 425.76,
-          date: new Date(2021, 9, 24),
-        },
-        {
-          id: "e3",
-          title: "Phone Bill",
-          amount: 525.76,
-          date: new Date(2021, 10, 14),
-        },
-        {
-          id: "e4",
-          title: "Mortgage",
-          amount: 625.76,
-          date: new Date(2021, 5, 18),
-        },
-      ];
-
+function Expenses(props) {
   return (
-    <div>
+    <Card className="expenses">
       <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
+        title={props.data[0].title}
+        amount={props.data[0].amount}
+        date={props.data[0].date}
       />
 
       <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
+        title={props.data[1].title}
+        amount={props.data[1].amount}
+        date={props.data[1].date}
       />
 
       <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
+        title={props.data[2].title}
+        amount={props.data[2].amount}
+        date={props.data[2].date}
       />
 
       <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
+        title={props.data[3].title}
+        amount={props.data[3].amount}
+        date={props.data[3].date}
       />
-    </div>
+    </Card>
   );
 }
 
