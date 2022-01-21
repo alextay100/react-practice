@@ -30,10 +30,14 @@ function App() {
     },
   ];
 
+  const onExpenseFormSubmission = (formData) => {
+    console.log(formData);
+  };
+
   return (
     <div className="App">
-      <NewExpense />
-      <Expenses data={expensesData}/>
+      <NewExpense onExpenseFormSubmit={onExpenseFormSubmission} />
+      <Expenses data={expensesData} />
     </div>
   );
 }
