@@ -9,14 +9,6 @@ function ExpenseItem(props) {
 
   const expenseAmount = props.amount;
 
-  const clickUpdateTitle = () => {
-    if (expenseTitle === props.title) {
-      setTitle("Test");
-    } else {
-      setTitle(props.title);
-    }
-  };
-
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -24,7 +16,6 @@ function ExpenseItem(props) {
         <h2>{expenseTitle}</h2>
         <div className="expense-item__price">£{expenseAmount}</div>
       </div>
-      <button onClick={clickUpdateTitle}>Change Title</button>
     </Card>
   );
 }
